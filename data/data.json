@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "username": "FashionGuru",
+        "password": "password123",
+        "adverts": [
+            {
+                "id": 1,
+                "name": "Knit bundle",
+                "price": 80,
+                "messages": [
+                    {
+                        "id": 1,
+                        "date": "2024-08-01",
+                        "sender": "StyleIcon",
+                        "message": "Is this bundle still available?"
+                    },
+                    {
+                        "id": 2,
+                        "date": "2024-08-02",
+                        "sender": "RetroChic",
+                        "message": "Can I get a discount if I buy two?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "username": "StyleIcon",
+        "password": "jeansrock",
+        "adverts": [
+            {
+                "id": 2,
+                "name": "Designer Jeans",
+                "price": 60,
+                "messages": [
+                    {
+                        "id": 1,
+                        "date": "2024-08-03",
+                        "sender": "FashionGuru",
+                        "message": "I’m interested, are these new?"
+                    },
+                    {
+                        "id": 2,
+                        "date": "2024-08-04",
+                        "sender": "CozyWear",
+                        "message": "What’s the waist size?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "username": "RetroChic",
+        "password": "vintagevibes",
+        "adverts": [
+            {
+                "id": 3,
+                "name": "Vintage Dress",
+                "price": 45,
+                "messages": [
+                    {
+                        "id": 1,
+                        "date": "2024-08-05",
+                        "sender": "StyleIcon",
+                        "message": "Is this dress in good condition?"
+                    },
+                    {
+                        "id": 2,
+                        "date": "2024-08-06",
+                        "sender": "CasualVibes",
+                        "message": "What’s the material of the dress?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "username": "CozyWear",
+        "password": "warmandcozy",
+        "adverts": [
+            {
+                "id": 4,
+                "name": "Woolen Scarf",
+                "price": 25,
+                "messages": [
+                    {
+                        "id": 1,
+                        "date": "2024-08-07",
+                        "sender": "FashionGuru",
+                        "message": "Is this scarf handmade?"
+                    },
+                    {
+                        "id": 2,
+                        "date": "2024-08-08",
+                        "sender": "RetroChic",
+                        "message": "Can you ship it internationally?"
+                    }
+                ]
+            }
+        ]
+    }
+]
