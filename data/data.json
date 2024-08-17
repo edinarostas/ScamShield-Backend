@@ -9,18 +9,48 @@
                 "title": "Knit bundle",
                 "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 80,
-                "messages": [
+                "conversations": [
                     {
                         "id": 1,
-                        "date": "2024-08-01",
-                        "sender": "StyleIcon",
-                        "message": "Is this bundle still available?"
+                        "messages": [
+                            {
+                                "advert_id": 1,
+                                "conversation_id": 1,
+                                "id": 1,
+                                "timestamp": "2024-08-01T10:00:00Z",
+                                "sender": "StyleIcon",
+                                "message": "Is this bundle still available?"
+                            },
+                            {
+                                "advert_id": 1,
+                                "conversation_id": 1,
+                                "id": 2,
+                                "timestamp": "2024-08-01T12:00:00Z",
+                                "sender": "FashionGuru",
+                                "message": "Yes, it's still available. I can offer a discount for buying two. Let me know if you're interested."
+                            }
+                        ]
                     },
                     {
                         "id": 2,
-                        "date": "2024-08-02",
-                        "sender": "RetroChic",
-                        "message": "Can I get a discount if I buy two?"
+                        "messages": [
+                            {
+                                "advert_id": 1,
+                                "conversation_id": 2,
+                                "id": 1,
+                                "timestamp": "2024-08-02T14:00:00Z",
+                                "sender": "RetroChic",
+                                "message": "Can I get a discount if I buy two?"
+                            },
+                            {
+                                "advert_id": 1,
+                                "conversation_id": 2,
+                                "id": 2,
+                                "timestamp": "2024-08-02T16:00:00Z",
+                                "sender": "FashionGuru",
+                                "message": "Sure, if you buy two bundles, I'll offer a 10% discount."
+                            }
+                        ]
                     }
                 ]
             }
@@ -36,18 +66,48 @@
                 "title": "Designer Jeans",
                 "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 60,
-                "messages": [
+                "conversations": [
                     {
                         "id": 1,
-                        "date": "2024-08-03",
-                        "sender": "FashionGuru",
-                        "message": "I’m interested, are these new?"
+                        "messages": [
+                            {
+                                "advert_id": 2,
+                                "conversation_id": 1,
+                                "id": 1,
+                                "timestamp": "2024-08-03T09:00:00Z",
+                                "sender": "FashionGuru",
+                                "message": "I’m interested, are these new?"
+                            },
+                            {
+                                "advert_id": 2,
+                                "conversation_id": 1,
+                                "id": 2,
+                                "timestamp": "2024-08-03T11:00:00Z",
+                                "sender": "StyleIcon",
+                                "message": "Yes, they are new. The waist size is 32 inches."
+                            }
+                        ]
                     },
                     {
                         "id": 2,
-                        "date": "2024-08-04",
-                        "sender": "CozyWear",
-                        "message": "What’s the waist size?"
+                        "messages": [
+                            {
+                                "advert_id": 2,
+                                "conversation_id": 2,
+                                "id": 1,
+                                "timestamp": "2024-08-04T10:00:00Z",
+                                "sender": "CozyWear",
+                                "message": "What’s the waist size?"
+                            },
+                            {
+                                "advert_id": 2,
+                                "conversation_id": 2,
+                                "id": 2,
+                                "timestamp": "2024-08-04T12:00:00Z",
+                                "sender": "StyleIcon",
+                                "message": "The waist size is 32 inches. Let me know if you need any more details."
+                            }
+                        ]
                     }
                 ]
             }
@@ -63,18 +123,48 @@
                 "title": "Vintage Dress",
                 "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 45,
-                "messages": [
+                "conversations": [
                     {
                         "id": 1,
-                        "date": "2024-08-05",
-                        "sender": "StyleIcon",
-                        "message": "Is this dress in good condition?"
+                        "messages": [
+                            {
+                                "advert_id": 3,
+                                "conversation_id": 1,
+                                "id": 1,
+                                "timestamp": "2024-08-05T15:00:00Z",
+                                "sender": "StyleIcon",
+                                "message": "Is this dress in good condition?"
+                            },
+                            {
+                                "advert_id": 3,
+                                "conversation_id": 1,
+                                "id": 2,
+                                "timestamp": "2024-08-05T17:00:00Z",
+                                "sender": "RetroChic",
+                                "message": "Yes, the dress is in excellent condition."
+                            }
+                        ]
                     },
                     {
                         "id": 2,
-                        "date": "2024-08-06",
-                        "sender": "CasualVibes",
-                        "message": "What’s the material of the dress?"
+                        "messages": [
+                            {
+                                "advert_id": 3,
+                                "conversation_id": 2,
+                                "id": 1,
+                                "timestamp": "2024-08-06T09:00:00Z",
+                                "sender": "CasualVibes",
+                                "message": "What’s the material of the dress?"
+                            },
+                            {
+                                "advert_id": 3,
+                                "conversation_id": 2,
+                                "id": 2,
+                                "timestamp": "2024-08-06T11:00:00Z",
+                                "sender": "RetroChic",
+                                "message": "It’s made of 100% cotton."
+                            }
+                        ]
                     }
                 ]
             }
@@ -90,18 +180,48 @@
                 "title": "Woolen Scarf",
                 "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 25,
-                "messages": [
+                "conversations": [
                     {
                         "id": 1,
-                        "date": "2024-08-07",
-                        "sender": "FashionGuru",
-                        "message": "Is this scarf handmade?"
+                        "messages": [
+                            {
+                                "advert_id": 4,
+                                "conversation_id": 1,
+                                "id": 1,
+                                "timestamp": "2024-08-07T10:00:00Z",
+                                "sender": "FashionGuru",
+                                "message": "Is this scarf handmade?"
+                            },
+                            {
+                                "advert_id": 4,
+                                "conversation_id": 1,
+                                "id": 2,
+                                "timestamp": "2024-08-07T12:00:00Z",
+                                "sender": "CozyWear",
+                                "message": "Yes, it is handmade."
+                            }
+                        ]
                     },
                     {
                         "id": 2,
-                        "date": "2024-08-08",
-                        "sender": "RetroChic",
-                        "message": "Can you ship it internationally?"
+                        "messages": [
+                            {
+                                "advert_id": 4,
+                                "conversation_id": 2,
+                                "id": 1,
+                                "timestamp": "2024-08-08T10:00:00Z",
+                                "sender": "RetroChic",
+                                "message": "Can you ship it internationally?"
+                            },
+                            {
+                                "advert_id": 4,
+                                "conversation_id": 2,
+                                "id": 2,
+                                "timestamp": "2024-08-08T12:00:00Z",
+                                "sender": "CozyWear",
+                                "message": "Yes, I can ship it internationally. Please provide your shipping address."
+                            }
+                        ]
                     }
                 ]
             }
