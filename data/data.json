@@ -6,7 +6,8 @@
         "adverts": [
             {
                 "id": 1,
-                "name": "Knit bundle",
+                "title": "Knit bundle",
+                "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 80,
                 "messages": [
                     {
@@ -32,7 +33,8 @@
         "adverts": [
             {
                 "id": 2,
-                "name": "Designer Jeans",
+                "title": "Designer Jeans",
+                "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 60,
                 "messages": [
                     {
@@ -58,7 +60,8 @@
         "adverts": [
             {
                 "id": 3,
-                "name": "Vintage Dress",
+                "title": "Vintage Dress",
+                "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 45,
                 "messages": [
                     {
@@ -84,7 +87,8 @@
         "adverts": [
             {
                 "id": 4,
-                "name": "Woolen Scarf",
+                "title": "Woolen Scarf",
+                "photo": "src/assets/images/clothes-pile.jpg",
                 "price": 25,
                 "messages": [
                     {
