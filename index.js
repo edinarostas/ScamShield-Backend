@@ -195,6 +195,13 @@ app.post('/messages/:advertId/conversations/:conversationId', authenticateToken,
     });
 });
 
+app.get('/username', authenticateToken, (req, res) => {
+    const loggedInUserId = req.user.id;
+    const user = users.find(user => user.id === loggedInUserId);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+
+    res.json({ username: user.username });
+});
 
 app.listen(port, () => {
     console.log(`Listening on ${port}`);
