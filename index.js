@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import cors from 'cors';
 import fs from 'fs';
 import 'dotenv/config'
-import usersData from './data/data.json' assert { type: "json" };
+import { detectScamMessage } from './detectScamMessage.js';
 
 const app = express();
 const port = process.env.PORT;
@@ -75,7 +75,6 @@ app.post('/signup', (req, res) => {
     res.status(201).json({ message: 'User registered successfully' });
 });
 
-// Login
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
@@ -134,7 +133,8 @@ app.get('/messages/:id', authenticateToken, (req, res) => {
                         sender: message.sender,
                         message: message.message,
                         advertId: advert.id,
-                        conversationId: conversation.id
+                        conversationId: conversation.id,
+                        scamAlert: message.scamAlert
                     }))
                 }))
             } : null;
@@ -148,7 +148,7 @@ app.get('/messages/:id', authenticateToken, (req, res) => {
 });
 
 
-app.post('/messages/:advertId/conversations/:conversationId', authenticateToken, (req, res) => {
+app.post('/messages/:advertId/conversations/:conversationId', authenticateToken, async (req, res) => {
     const loggedInUserId = req.user.id;
     const { advertId, conversationId } = req.params;
     const { message } = req.body;
@@ -175,12 +175,15 @@ app.post('/messages/:advertId/conversations/:conversationId', authenticateToken,
     if (!foundAdvert) return res.status(404).json({ error: 'Advert not found' });
     if (!foundConversation) return res.status(404).json({ error: 'Conversation not found' });
 
-    // Add the new message to the conversation
+    const isScam = await detectScamMessage(message);
+    const scamAlert = isScam === "I think it is a scam message." ? true : false;
+
     const newMessage = {
         id: foundConversation.messages.length + 1,
-        date: new Date().toISOString(),
+        timestamp: new Date().toISOString(),
         sender: user.username,
         message,
+        scamAlert
     };
 
     foundConversation.messages.push(newMessage);
@@ -191,6 +194,7 @@ app.post('/messages/:advertId/conversations/:conversationId', authenticateToken,
         res.json({
             message: 'Message added successfully',
             conversation: foundConversation,
+            scamAlert
         });
     });
 });
