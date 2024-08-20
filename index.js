@@ -2,7 +2,8 @@ import express from 'express';
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
 import fs from 'fs';
-import 'dotenv/config'
+import 'dotenv/config';
+import { v7 as uuidv7 } from 'uuid';
 import { detectScamMessage } from './detectScamMessage.js';
 
 const app = express();
@@ -41,7 +42,6 @@ const loadData = () => {
         try {
             users = JSON.parse(data);
             lastUpdate = Date.now();
-            console.log('Data loaded successfully');
         } catch (parseError) {
             console.error('Failed to parse data file:', parseError);
         }
@@ -60,19 +60,29 @@ setInterval(() => {
 app.post('/signup', (req, res) => {
     const { username, password } = req.body;
 
-    // Check if the username already exists
     const userExists = users.find(user => user.username === username);
     if (userExists) {
         return res.status(400).json({ message: 'Username already taken' });
     }
 
-    // Add new user to the "database"
-    const newUser = { id: users.length + 1, username, password, adverts: [] };
+    const newUser = {
+        id: uuidv7(),
+        username,
+        password,
+        adverts: []
+    };
     users.push(newUser);
-    const accessToken = jwt.sign({ username: user.username, id: user.id }, secretKey, { expiresIn: '1h' });
-    const userId = user.id;
-    res.json({ accessToken, userId });
-    res.status(201).json({ message: 'User registered successfully' });
+
+    fs.writeFile(dataFilePath, JSON.stringify(users, null, 2), 'utf8', (writeErr) => {
+        if (writeErr) {
+            console.error('Failed to write data file:', writeErr);
+            return res.status(500).json({ error: 'Failed to save user data' });
+        }
+
+        const accessToken = jwt.sign({ username: newUser.username, id: newUser.id }, secretKey, { expiresIn: '5h' });
+        const userId = newUser.id;
+        res.status(201).json({ accessToken, userId });
+    });
 });
 
 app.post('/login', (req, res) => {
@@ -83,7 +93,7 @@ app.post('/login', (req, res) => {
         return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    const accessToken = jwt.sign({ username: user.username, id: user.id }, secretKey, { expiresIn: '1h' });
+    const accessToken = jwt.sign({ username: user.username, id: user.id }, secretKey, { expiresIn: '5h' });
     const userId = user.id;
 
     res.json({ accessToken, userId });
@@ -147,7 +157,6 @@ app.get('/messages/:id', authenticateToken, (req, res) => {
     });
 });
 
-
 app.post('/messages/:advertId/conversations/:conversationId', authenticateToken, async (req, res) => {
     const loggedInUserId = req.user.id;
     const { advertId, conversationId } = req.params;
@@ -162,10 +171,10 @@ app.post('/messages/:advertId/conversations/:conversationId', authenticateToken,
     let foundConversation = null;
 
     for (const otherUser of users) {
-        const advert = otherUser.adverts.find(advert => advert.id === parseInt(advertId));
+        const advert = otherUser.adverts.find(advert => advert.id === advertId);
         if (advert) {
             foundAdvert = advert;
-            foundConversation = advert.conversations.find(conversation => conversation.id === parseInt(conversationId));
+            foundConversation = advert.conversations.find(conversation => conversation.id === conversationId);
             if (foundConversation) {
                 break;
             }
@@ -173,13 +182,19 @@ app.post('/messages/:advertId/conversations/:conversationId', authenticateToken,
     }
 
     if (!foundAdvert) return res.status(404).json({ error: 'Advert not found' });
-    if (!foundConversation) return res.status(404).json({ error: 'Conversation not found' });
+    if (!foundConversation) {
+        foundConversation = {
+            id: conversationId,
+            messages: []
+        };
+        foundAdvert.conversations.push(foundConversation);
+    }
 
     const isScam = await detectScamMessage(message);
     const scamAlert = isScam === "I think it is a scam message." ? true : false;
 
     const newMessage = {
-        id: foundConversation.messages.length + 1,
+        id: uuidv7(),
         timestamp: new Date().toISOString(),
         sender: user.username,
         message,
@@ -205,6 +220,28 @@ app.get('/username', authenticateToken, (req, res) => {
     if (!user) return res.status(404).json({ error: 'User not found' });
 
     res.json({ username: user.username });
+});
+
+app.get('/advert/:id', authenticateToken, (req, res) => {
+    const { id } = req.params;
+
+    let foundAdvert = null;
+    for (const user of users) {
+        const advert = user.adverts.find(advert => advert.id === id);
+        if (advert) {
+            foundAdvert = {
+                ...advert,
+                username: user.username
+            };
+            break;
+        }
+    }
+
+    if (!foundAdvert) {
+        return res.status(404).json({ error: 'Advert not found' });
+    }
+
+    res.json({ advert: foundAdvert });
 });
 
 app.listen(port, () => {

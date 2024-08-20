@@ -1,237 +1,179 @@
 [
-    {
-        "id": 1,
-        "username": "FashionGuru",
-        "password": "password123",
-        "adverts": [
-            {
-                "id": 1,
-                "title": "Knit bundle",
-                "photo": "src/assets/images/clothes-pile.jpg",
-                "price": 80,
-                "conversations": [
-                    {
-                        "id": 1,
-                        "messages": [
-                            {
-                                "advert_id": 1,
-                                "conversation_id": 1,
-                                "id": 1,
-                                "timestamp": "2024-08-01T10:00:00Z",
-                                "sender": "StyleIcon",
-                                "message": "Is this bundle still available?"
-                            },
-                            {
-                                "advert_id": 1,
-                                "conversation_id": 1,
-                                "id": 2,
-                                "timestamp": "2024-08-01T12:00:00Z",
-                                "sender": "FashionGuru",
-                                "message": "Yes, it's still available. I can offer a discount for buying two. Let me know if you're interested."
-                            }
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "messages": [
-                            {
-                                "advert_id": 1,
-                                "conversation_id": 2,
-                                "id": 1,
-                                "timestamp": "2024-08-02T14:00:00Z",
-                                "sender": "RetroChic",
-                                "message": "Can I get a discount if I buy two?"
-                            },
-                            {
-                                "advert_id": 1,
-                                "conversation_id": 2,
-                                "id": 2,
-                                "timestamp": "2024-08-02T16:00:00Z",
-                                "sender": "FashionGuru",
-                                "message": "Sure, if you buy two bundles, I'll offer a 10% discount."
-                            }
-                        ]
-                    }
-                ]
-            }
+  {
+    "id": "d65e8a9b-0307-4539-9785-28d2f8a4deff",
+    "username": "FashionGuru",
+    "password": "password123",
+    "adverts": [
+      {
+        "id": "4cc8c793-9294-4aa1-9374-25e1426b1310",
+        "title": "Knit bundle",
+        "photo": "src/assets/images/clothes-pile.jpg",
+        "price": 80,
+        "conversations": [
+          {
+            "id": "de270f5b-7e60-4c0f-a81a-e5a73fefeb64",
+            "messages": [
+              {
+                "id": "d7e3c7b7-c302-4819-a1f7-7bc6d05d4192",
+                "advert_id": "4cc8c793-9294-4aa1-9374-25e1426b1310",
+                "conversation_id": "de270f5b-7e60-4c0f-a81a-e5a73fefeb64",
+                "timestamp": "2024-08-01T10:00:00Z",
+                "sender": "StyleIcon",
+                "message": "Is this bundle still available?"
+              },
+              {
+                "id": "91dddf6a-d989-404b-8ac1-5f292d56d52c",
+                "advert_id": "4cc8c793-9294-4aa1-9374-25e1426b1310",
+                "conversation_id": "de270f5b-7e60-4c0f-a81a-e5a73fefeb64",
+                "timestamp": "2024-08-01T12:00:00Z",
+                "sender": "FashionGuru",
+                "message": "Yes, it's still available. I can offer a discount for buying two. Let me know if you're interested."
+              }
+            ]
+          },
+          {
+            "id": "2c101b68-3b3b-4c28-9674-509d8f5dd5cf",
+            "messages": [
+              {
+                "id": "c8f47689-d20e-4fd0-80d0-2ad048d23e58",
+                "advert_id": "4cc8c793-9294-4aa1-9374-25e1426b1310",
+                "conversation_id": "2c101b68-3b3b-4c28-9674-509d8f5dd5cf",
+                "timestamp": "2024-08-02T14:00:00Z",
+                "sender": "RetroChic",
+                "message": "Can I get a discount if I buy two?"
+              },
+              {
+                "id": "9e83e92d-9ff6-4d79-810f-cd1b21738ad4",
+                "advert_id": "4cc8c793-9294-4aa1-9374-25e1426b1310",
+                "conversation_id": "2c101b68-3b3b-4c28-9674-509d8f5dd5cf",
+                "timestamp": "2024-08-02T16:00:00Z",
+                "sender": "FashionGuru",
+                "message": "Sure, if you buy two, I'll offer a 10% discount."
+              }
+            ]
+          }
         ]
-    },
-    {
-        "id": 2,
-        "username": "StyleIcon",
-        "password": "jeansrock",
-        "adverts": [
-            {
-                "id": 2,
-                "title": "Designer Jeans",
-                "photo": "src/assets/images/clothes-pile.jpg",
-                "price": 60,
-                "conversations": [
-                    {
-                        "id": 1,
-                        "messages": [
-                            {
-                                "advert_id": 2,
-                                "conversation_id": 1,
-                                "id": 1,
-                                "timestamp": "2024-08-03T09:00:00Z",
-                                "sender": "FashionGuru",
-                                "message": "I’m interested, are these new?"
-                            },
-                            {
-                                "advert_id": 2,
-                                "conversation_id": 1,
-                                "id": 2,
-                                "timestamp": "2024-08-03T11:00:00Z",
-                                "sender": "StyleIcon",
-                                "message": "Yes, they are new. The waist size is 32 inches."
-                            },
-                            {
-                                "id": 3,
-                                "timestamp": "2024-08-19T04:56:12.640Z",
-                                "sender": "FashionGuru",
-                                "message": "I want to buy it, Please send your bank account informations",
-                                "scamAlert": true
-                            }
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "messages": [
-                            {
-                                "advert_id": 2,
-                                "conversation_id": 2,
-                                "id": 1,
-                                "timestamp": "2024-08-04T10:00:00Z",
-                                "sender": "CozyWear",
-                                "message": "What’s the waist size?"
-                            },
-                            {
-                                "advert_id": 2,
-                                "conversation_id": 2,
-                                "id": 2,
-                                "timestamp": "2024-08-04T12:00:00Z",
-                                "sender": "StyleIcon",
-                                "message": "The waist size is 32 inches. Let me know if you need any more details."
-                            }
-                        ]
-                    }
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "id": "ed8e84ec-3769-4f02-9f3d-93dff304c61d",
+    "username": "StyleIcon",
+    "password": "jeansrock",
+    "adverts": [
+      {
+        "id": "4f8c3e5a-c169-4515-82a7-05796aa2c3bb",
+        "title": "Designer Jeans",
+        "photo": "src/assets/images/clothes-pile.jpg",
+        "price": 60,
+        "conversations": [
+          {
+            "id": "1b1c2750-47e6-4aeb-bab1-112f9fbcf002",
+            "messages": [
+              {
+                "id": "8c6e219f-2f34-4e69-845f-d1f9a5e05960",
+                "advert_id": "4f8c3e5a-c169-4515-82a7-05796aa2c3bb",
+                "conversation_id": "1b1c2750-47e6-4aeb-bab1-112f9fbcf002",
+                "timestamp": "2024-08-03T09:00:00Z",
+                "sender": "FashionGuru",
+                "message": "I’m interested, are these new?"
+              },
+              {
+                "id": "f9a8bc23-40d8-4f69-aba4-3c53d7e7dbb6",
+                "advert_id": "4f8c3e5a-c169-4515-82a7-05796aa2c3bb",
+                "conversation_id": "1b1c2750-47e6-4aeb-bab1-112f9fbcf002",
+                "timestamp": "2024-08-03T11:00:00Z",
+                "sender": "StyleIcon",
+                "message": "Yes, they are new. The waist size is 32 inches."
+              },
+              {
+                "id": "b2c57615-5fc4-49b8-9e2a-c051517b77df",
+                "timestamp": "2024-08-19T04:56:12.640Z",
+                "sender": "FashionGuru",
+                "message": "I want to buy it, Please send your bank account informations",
+                "scamAlert": true
+              }
+            ]
+          },
+          {
+            "id": "b0a0b59b-e48e-4073-b17b-68b2b2be9a27",
+            "messages": [
+              {
+                "id": "d1b34d72-69e4-42cb-a091-193bf376fd2f",
+                "advert_id": "4f8c3e5a-c169-4515-82a7-05796aa2c3bb",
+                "conversation_id": "b0a0b59b-e48e-4073-b17b-68b2b2be9a27",
+                "timestamp": "2024-08-04T10:00:00Z",
+                "sender": "CozyWear",
+                "message": "What’s the waist size?"
+              },
+              {
+                "id": "9c31e035-2e54-47a7-953e-f41672a43fc3",
+                "advert_id": "4f8c3e5a-c169-4515-82a7-05796aa2c3bb",
+                "conversation_id": "b0a0b59b-e48e-4073-b17b-68b2b2be9a27",
+                "timestamp": "2024-08-04T12:00:00Z",
+                "sender": "StyleIcon",
+                "message": "The waist size is 32 inches. Let me know if you need any more details."
+              }
+            ]
+          }
         ]
-    },
-    {
-        "id": 3,
-        "username": "RetroChic",
-        "password": "vintagevibes",
-        "adverts": [
-            {
-                "id": 3,
-                "title": "Vintage Dress",
-                "photo": "src/assets/images/clothes-pile.jpg",
-                "price": 45,
-                "conversations": [
-                    {
-                        "id": 1,
-                        "messages": [
-                            {
-                                "advert_id": 3,
-                                "conversation_id": 1,
-                                "id": 1,
-                                "timestamp": "2024-08-05T15:00:00Z",
-                                "sender": "StyleIcon",
-                                "message": "Is this dress in good condition?"
-                            },
-                            {
-                                "advert_id": 3,
-                                "conversation_id": 1,
-                                "id": 2,
-                                "timestamp": "2024-08-05T17:00:00Z",
-                                "sender": "RetroChic",
-                                "message": "Yes, the dress is in excellent condition."
-                            }
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "messages": [
-                            {
-                                "advert_id": 3,
-                                "conversation_id": 2,
-                                "id": 1,
-                                "timestamp": "2024-08-06T09:00:00Z",
-                                "sender": "CasualVibes",
-                                "message": "What’s the material of the dress?"
-                            },
-                            {
-                                "advert_id": 3,
-                                "conversation_id": 2,
-                                "id": 2,
-                                "timestamp": "2024-08-06T11:00:00Z",
-                                "sender": "RetroChic",
-                                "message": "It’s made of 100% cotton."
-                            }
-                        ]
-                    }
-                ]
-            }
+      },
+      {
+        "id": "775bd9e7-d0ed-47ec-8023-bca4608105b0",
+        "title": "Designer Hoodie",
+        "photo": "src/assets/images/clothes-pile.jpg",
+        "price": 80,
+        "conversations": [
+          {
+            "id": "01916ecc-3a56-7772-83c0-bdb06d3681ba",
+            "messages": [
+              {
+                "id": "01916ecc-eda0-7222-b445-22f93b0a6538",
+                "timestamp": "2024-08-20T08:00:09.632Z",
+                "sender": "FashionGuru",
+                "message": "Hi, what size is the hoodie? ",
+                "scamAlert": false
+              }
+            ]
+          }
         ]
-    },
-    {
-        "id": 4,
-        "username": "CozyWear",
-        "password": "warmandcozy",
-        "adverts": [
-            {
-                "id": 4,
-                "title": "Woolen Scarf",
-                "photo": "src/assets/images/clothes-pile.jpg",
-                "price": 25,
-                "conversations": [
-                    {
-                        "id": 1,
-                        "messages": [
-                            {
-                                "advert_id": 4,
-                                "conversation_id": 1,
-                                "id": 1,
-                                "timestamp": "2024-08-07T10:00:00Z",
-                                "sender": "FashionGuru",
-                                "message": "Is this scarf handmade?"
-                            },
-                            {
-                                "advert_id": 4,
-                                "conversation_id": 1,
-                                "id": 2,
-                                "timestamp": "2024-08-07T12:00:00Z",
-                                "sender": "CozyWear",
-                                "message": "Yes, it is handmade."
-                            }
-                        ]
-                    },
-                    {
-                        "id": 2,
-                        "messages": [
-                            {
-                                "advert_id": 4,
-                                "conversation_id": 2,
-                                "id": 1,
-                                "timestamp": "2024-08-08T10:00:00Z",
-                                "sender": "RetroChic",
-                                "message": "Can you ship it internationally?"
-                            },
-                            {
-                                "advert_id": 4,
-                                "conversation_id": 2,
-                                "id": 2,
-                                "timestamp": "2024-08-08T12:00:00Z",
-                                "sender": "CozyWear",
-                                "message": "Yes, I can ship it internationally. Please provide your shipping address."
-                            }
-                        ]
-                    }
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "id": "d998188b-6cb4-4e41-9b51-fdca3f22fb13",
+    "username": "RetroChic",
+    "password": "vintagevibes",
+    "adverts": [
+      {
+        "id": "bb5c0ab6-c4db-4f8b-9b9d-273be2a8f19d",
+        "title": "Vintage Dress",
+        "photo": "src/assets/images/clothes-pile.jpg",
+        "price": 45,
+        "conversations": [
+          {
+            "id": "6e6c3e30-2f8e-469e-8b88-4a65f21a6d42",
+            "messages": [
+              {
+                "id": "7f5efb57-c122-4b31-b61e-13ae3930fd40",
+                "advert_id": "bb5c0ab6-c4db-4f8b-9b9d-273be2a8f19d",
+                "conversation_id": "6e6c3e30-2f8e-469e-8b88-4a65f21a6d42",
+                "timestamp": "2024-08-05T08:00:00Z",
+                "sender": "CozyWear",
+                "message": "Is this dress still available?"
+              },
+              {
+                "id": "30ab9a34-523f-4d55-b11e-1cbb6b4a63d1",
+                "advert_id": "bb5c0ab6-c4db-4f8b-9b9d-273be2a8f19d",
+                "conversation_id": "6e6c3e30-2f8e-469e-8b88-4a65f21a6d42",
+                "timestamp": "2024-08-05T10:00:00Z",
+                "sender": "RetroChic",
+                "message": "Yes, it is! Would you like to see more photos?"
+              }
+            ]
+          }
         ]
-    }
+      }
+    ]
+  }
 ]
