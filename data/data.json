@@ -20,14 +20,6 @@
                 "timestamp": "2024-08-01T10:00:00Z",
                 "sender": "StyleIcon",
                 "message": "Is this bundle still available?"
-              },
-              {
-                "id": "91dddf6a-d989-404b-8ac1-5f292d56d52c",
-                "advert_id": "4cc8c793-9294-4aa1-9374-25e1426b1310",
-                "conversation_id": "de270f5b-7e60-4c0f-a81a-e5a73fefeb64",
-                "timestamp": "2024-08-01T12:00:00Z",
-                "sender": "FashionGuru",
-                "message": "Yes, it's still available. I can offer a discount for buying two. Let me know if you're interested."
               }
             ]
           },
@@ -64,7 +56,7 @@
       {
         "id": "4f8c3e5a-c169-4515-82a7-05796aa2c3bb",
         "title": "Designer Jeans",
-        "photo": "src/assets/images/clothes-pile.jpg",
+        "photo": "src/assets/images/denim-pile.jpg",
         "price": 60,
         "conversations": [
           {
@@ -87,10 +79,17 @@
                 "message": "Yes, they are new. The waist size is 32 inches."
               },
               {
-                "id": "b2c57615-5fc4-49b8-9e2a-c051517b77df",
-                "timestamp": "2024-08-19T04:56:12.640Z",
+                "id": "01917ba1-1ff1-700d-812d-8586468e90bb",
+                "timestamp": "2024-08-22T19:47:22.737Z",
                 "sender": "FashionGuru",
-                "message": "I want to buy it, Please send your bank account informations",
+                "message": "Can you also provide the length size? Thanks.",
+                "scamAlert": false
+              },
+              {
+                "id": "01917ba1-ec57-700d-812d-8e507fa514dd",
+                "timestamp": "2024-08-22T19:48:15.063Z",
+                "sender": "StyleIcon",
+                "message": "Sure! The length is 34 inches, I can offer you a discount if you provide your full name and address now. We can finalize a deal quickly.",
                 "scamAlert": true
               }
             ]
@@ -120,8 +119,8 @@
       },
       {
         "id": "775bd9e7-d0ed-47ec-8023-bca4608105b0",
-        "title": "Designer Hoodie",
-        "photo": "src/assets/images/clothes-pile.jpg",
+        "title": "Linen Shirt",
+        "photo": "src/assets/images/linen-shirt.jpg",
         "price": 80,
         "conversations": [
           {
@@ -148,7 +147,7 @@
       {
         "id": "bb5c0ab6-c4db-4f8b-9b9d-273be2a8f19d",
         "title": "Vintage Dress",
-        "photo": "src/assets/images/clothes-pile.jpg",
+        "photo": "src/assets/images/vintage-dress.jpg",
         "price": 45,
         "conversations": [
           {
